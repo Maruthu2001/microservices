@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-green-100 to-teal-100 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white p-8 rounded-xl shadow-lg max-w-md w-full text-center">
+        <h1 class="text-4xl font-bold text-gray-800 mb-6" th:text="'Hello, ' + ${name} + '!'">Hello, World!</h1>
+        <p class="text-lg text-gray-600 mb-8">
+            This message is rendered dynamically by Spring MVC and Thymeleaf.
+        </p>
+        <a href="/" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
+            Go Back Home
+        </a>
+    </div>
+</body>
+</html>
